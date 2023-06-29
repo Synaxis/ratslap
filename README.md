@@ -1,4 +1,4 @@
-```git clone https://github.com/Synaxis/ratslap && cd ratslap &&  sudo apt-get install libusb-1.0-0-dev build-essential pkg-config -y && make```<br><br>
+```git clone https://github.com/Synaxis/ratslap && cd ratslap &&  sudo apt-get install libusb-dev build-essential pkg-config -y && make```<br><br>
 
 ```chmod +rwx ratslap```<br><br>
 
