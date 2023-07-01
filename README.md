@@ -1,6 +1,6 @@
-```git clone https://github.com/Synaxis/ratslap && cd ratslap &&  sudo apt-get install libusb-dev build-essential pkg-config -y && make```<br><br>
+```git clone https://github.com/Synaxis/ratslap && cd ratslap &&  sudo apt-get install libusb-dev build-essential pkg-config -y && make && chmod +rwx ratslap ```<br><br>
 
-```chmod +rwx ratslap```<br><br>
+``````<br><br>
 
 //sets dpi to 800<br><br>
 ```sudo ./ratslap --modify F3 -D 800```
