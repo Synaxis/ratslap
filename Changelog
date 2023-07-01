@@ -1,0 +1,581 @@
+2023-06-29 10:50:24 -0300 Synaxis <01xtor@gmail.com>
+    4815953 Update README.md
+
+2022-08-20 10:41:15 -0300 Synaxis <01xtor@gmail.com>
+    fb8415c Update README.md
+
+2022-05-30 08:43:47 -0300 Synaxis <01xtor@gmail.com>
+    0f2316d Update README.md
+
+2022-05-30 08:43:21 -0300 Synaxis <01xtor@gmail.com>
+    53f6b14 Update README.md
+
+2022-05-23 11:40:58 -0300 Synaxis <01xtor@gmail.com>
+    1fe5302 Update README.md
+
+2022-05-23 11:40:18 -0300 Synaxis <01xtor@gmail.com>
+    ee71955 Fix compiling on ubuntu 20.04
+
+2022-05-22 22:22:44 -0300 Synaxis <01xtor@gmail.com>
+    6c0b4d5 Update README.md
+
+2022-04-13 20:15:58 -0400 Synaxis <01xtor@gmail.com>
+    1531ba9 Update README.md
+
+2022-04-13 20:15:32 -0400 Synaxis <01xtor@gmail.com>
+    097d594 Update README.md
+
+2022-04-13 20:15:13 -0400 Synaxis <01xtor@gmail.com>
+    4cc5ff6 Update README.md
+
+2022-04-13 20:14:48 -0400 Synaxis <01xtor@gmail.com>
+    f5e22ab Update README.md
+
+2022-04-13 20:10:54 -0400 Synaxis <01xtor@gmail.com>
+    ee24155 Update README.md
+
+2020-08-25 00:17:29 +1000 Krayon <krayon.git@qdnx.org>
+    fba0f67 Release: 0.4.1
+
+2020-08-24 22:29:40 +1000 Krayon <krayon.git@qdnx.org>
+    13f9fba dpishift ( fixes PR#23 - thanks @Zush18 )
+
+2020-08-24 22:28:44 +1000 Krayon <krayon.git@qdnx.org>
+    501047a Add master to main build warning
+
+    Thanks to PinkCathodeCat on AUR for the tipoff.
+
+2020-08-24 22:24:17 +1000 Krayon <krayon.git@qdnx.org>
+    e2f3f91 Fix CodeQL lang
+
+2020-07-30 05:48:48 +1000 Krayon <krayon.git@qdnx.org>
+    4fe887c Update CodeQL Workflow
+
+2020-07-30 05:39:29 +1000 Krayon <krayon.git@qdnx.org>
+    430070b Minor README update
+
+2020-06-30 02:06:31 +1000 Krayon <krayon.git@qdnx.org>
+    9761384 Update workflow (deploy - GitLab)
+
+2020-06-26 13:37:53 +1000 Krayon <krayon.git@qdnx.org>
+    9515307 Hide vimline in markdown
+
+2020-06-26 13:27:00 +1000 Krayon <krayon.git@qdnx.org>
+    94345f3 Update workflow (deploy)
+
+2020-07-16 07:03:38 +1000 Krayon <krayon.git@qdnx.org>
+    16dcf19 Create codeql-analysis.yml
+
+2020-06-30 05:05:32 +1000 Krayon <krayon.git@qdnx.org>
+    954cdef Rename master branch to main
+
+2020-06-22 13:13:53 +1000 Krayon <krayon.git@qdnx.org>
+    22bfecb Release: 0.4.0
+
+2020-06-19 05:20:58 +1000 Krayon <krayon.git@qdnx.org>
+    3e1bc40 Merge pull request #21 from krayon/lgtm_fixes
+
+    LGTM fixes
+2020-06-19 04:55:21 +1000 Krayon <krayon.git@qdnx.org>
+    3dca277 Local/Global variable collision
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-06-19 04:50:17 +1000 Krayon <krayon.git@qdnx.org>
+    23e20a0 CWE-546 - FIXME tags
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-06-19 04:45:08 +1000 Krayon <krayon.git@qdnx.org>
+    a2d96c6 CWE-676 - localtime
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-05-04 02:06:23 +1000 Krayon <krayon.git@qdnx.org>
+    2b692da CSS for bash/shell blocks
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-05-04 01:49:59 +1000 Krayon <krayon.git@qdnx.org>
+    f780c42 md fixups, code blocks render properly in HTML
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 18:20:58 +1100 Krayon <krayon.git@qdnx.org>
+    da17398 Release: 0.3.2
+
+2020-02-29 18:16:24 +1100 Krayon <krayon.git@qdnx.org>
+    cda02e1 Merge branch 'ft.copyright' into develop
+
+2020-02-29 18:14:34 +1100 Krayon <krayon.git@qdnx.org>
+    4244add Copyright 2020
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 18:12:28 +1100 Krayon <krayon.git@qdnx.org>
+    aa1bd0d creole README reference
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 17:57:55 +1100 Krayon <krayon.git@qdnx.org>
+    c5da757 Hotfix: 0.3.1
+
+2020-02-29 06:04:45 +1100 Krayon <krayon.git@qdnx.org>
+    b5f2688 Release: 0.3.0
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 06:00:23 +1100 Krayon <krayon.git@qdnx.org>
+    f32b7db Minor typo
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 05:58:35 +1100 Krayon <krayon.git@qdnx.org>
+    54d91ae Merge branch 'ft.qb129-newkeys' into develop
+
+2020-02-29 05:58:04 +1100 Krayon <krayon.git@qdnx.org>
+    0ccb9e2 Fix QB#129 - Add missing keys
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 05:36:56 +1100 Krayon <krayon.git@qdnx.org>
+    8faf128 +QB#129 to README
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 05:33:56 +1100 Krayon <krayon.git@qdnx.org>
+    44a62c7 Merge branch 'ft.qb125-numPLUS' into develop
+
+2020-02-29 05:32:15 +1100 Krayon <krayon.git@qdnx.org>
+    2c237a2 FIX: QB#125 - Error assigning Num+
+
+    Fixes (GitHub) #16
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 05:29:40 +1100 Krayon <krayon.git@qdnx.org>
+    fa000f7 Merge branch 'ft.qb128-badkeys' into develop
+
+2020-02-29 05:29:01 +1100 Krayon <krayon.git@qdnx.org>
+    78f073d FIX: QB#128 - Unrecognised keys silently ignored
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 05:03:15 +1100 Krayon <krayon.git@qdnx.org>
+    e32eeea +Bug links
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 04:56:35 +1100 Krayon <krayon.git@qdnx.org>
+    21cf93a Merge branch 'ft.htmldoco' into develop
+
+2020-02-29 04:55:58 +1100 Krayon <krayon.git@qdnx.org>
+    c3d2def Build html (if markdown_py present)
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 04:45:30 +1100 Krayon <krayon.git@qdnx.org>
+    9c21a0c Makefile cleanup
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 04:39:40 +1100 Krayon <krayon.git@qdnx.org>
+    8d4c40b +Minor formatting
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 04:36:46 +1100 Krayon <krayon.git@qdnx.org>
+    b25b21d +Dev Workflow
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 03:18:43 +1100 Krayon <krayon.git@qdnx.org>
+    871b0bd Merge branch 'ft.dpi' into develop
+
+2018-10-03 21:28:57 -0700 Daniel Dawson <danielcdawson@gmail.com>
+    8033303 DPI-related enhancements and fixes: * Can now configure DPI
+    sensitivity levels: set values, select default,   enable/disable DPI
+    shift function, set DPI shift value. * Correctly set and recognize 4000
+    DPI.
+
+    Also fixed hex debugging output for mode data.
+
+    [Krayon] Update doco re: DPI feature
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2020-02-29 02:48:13 +1100 Krayon <krayon.git@qdnx.org>
+    acda2bc Merge branch 'ft.markdown' into develop
+
+2020-02-29 02:28:09 +1100 Krayon <krayon.git@qdnx.org>
+    5de6341 creole to markdown :(
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2018-08-07 00:10:54 +1000 Krayon <krayon.git@qdnx.org>
+    b6234ef Merge tag '0.2.3' into develop
+
+    RELEASE: 0.2.3
+
+2018-08-07 00:10:02 +1000 Krayon <krayon.git@qdnx.org>
+    54add43 RELEASE: 0.2.3
+
+    Merge branch 'release/0.2.3'
+
+2018-08-07 00:09:12 +1000 Krayon <krayon.git@qdnx.org>
+    4186808 Bump version to 0.2.3
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2018-08-06 23:55:51 +1000 Krayon <krayon.git@qdnx.org>
+    4986657 Flesh out contributing and release notes
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2018-08-06 23:38:51 +1000 Krayon <krayon.git@qdnx.org>
+    7293eda Add info on bug QB#125
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2018-07-11 01:59:10 +1000 Krayon <krayon.git@qdnx.org>
+    8e28748 Merge branch 'feature/isolatehelp' into develop
+
+2018-07-11 01:48:06 +1000 Krayon <krayon.git@qdnx.org>
+    32ac5ec Fix QB#122 - Help shouldn't require USB perms
+
+    * Add mouse_prime() and mouse_unprime()
+    * Add mouse_primed flag
+    * Ensure primed before all USB operations
+    * Call mouse_prime() before any selection or modification
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2018-07-11 01:40:04 +1000 Krayon <krayon.git@qdnx.org>
+    ada6d32 Fix QB#124 - Failed operations don't abort exec
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2018-07-11 00:28:46 +1000 Krayon <krayon.git@qdnx.org>
+    7bc6faf Fix QB#123 - Check mode_load() return code
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2018-07-11 00:11:15 +1000 Krayon <krayon.git@qdnx.org>
+    a59795c Add function declarations
+
+    Signed-off-by: Krayon <krayon.git@qdnx.org>
+
+2018-05-01 01:23:50 +1000 Krayon <krayon.git@qdnx.org>
+    9c14732 Add Nemo to Contributor list
+
+2018-05-01 00:40:33 +1000 Krayon <krayon.git@qdnx.org>
+    f668b7d Merge tag '0.2.2' into develop
+
+    RELEASE: 0.2.2
+
+2018-05-01 00:38:23 +1000 Krayon <krayon.git@qdnx.org>
+    5c8a2b8 RELEASE: 0.2.2
+
+    Merge branch 'release/0.2.2'
+
+2018-05-01 00:35:04 +1000 Krayon <krayon.git@qdnx.org>
+    90c9e80 Bump version to 0.2.2
+
+2018-05-01 00:29:15 +1000 Krayon <krayon.git@qdnx.org>
+    12ad771 Merge branch 'feature/documentation' into develop
+
+2018-05-01 00:27:43 +1000 Krayon <krayon.git@qdnx.org>
+    00aebe8 Add CONTRIBUTING and link in README
+
+2018-05-01 00:18:58 +1000 Krayon <krayon.git@qdnx.org>
+    b7381c3 Add AUTHORS and doco links in README
+
+2018-04-30 23:38:22 +1000 Krayon <krayon.git@qdnx.org>
+    02d7c9c Merge branch 'feature/veraddbranch' into develop
+
+2018-04-30 22:38:58 +1000 Krayon <krayon.git@qdnx.org>
+    d89a82b Add branch name to version
+
+2018-04-14 21:05:10 +0530 Nemo <me@captnemo.in>
+    89ef052 Fix QB#121 - Use libusb_set_option, set_debug is deprecated
+
+2018-04-27 10:41:59 +1000 Krayon <krayon.git@qdnx.org>
+    c16d625 Merge branch 'master' into develop
+
+2018-04-25 23:44:18 +1000 Krayon <krayon.git@qdnx.org>
+    364daed Add BUILD_COMMIT to git.h
+
+2017-02-27 22:50:49 +1100 Krayon <krayon.git@qdnx.org>
+    d6b9714 Fix links to bugs not terminated
+
+2017-02-27 22:50:49 +1100 Krayon <krayon.git@qdnx.org>
+    e7fe329 Fix links to bugs not terminated
+
+2017-02-27 22:39:49 +1100 Krayon <krayon.git@qdnx.org>
+    b291f2b Merge branch 'release-0.2.1' into develop
+
+2017-02-27 22:39:07 +1100 Krayon <krayon.git@qdnx.org>
+    d6dc4a0 Merge branch 'release-0.2.1'
+
+2017-02-27 22:37:38 +1100 Krayon <krayon.git@qdnx.org>
+    853698f RELEASE VERSION: 0.2.1
+
+2017-02-27 22:30:15 +1100 Krayon <krayon.git@qdnx.org>
+    e17b76b Programmatically set man page version and date
+
+2017-02-27 21:54:57 +1100 Krayon <krayon.git@qdnx.org>
+    f4a68a8 Fix QB#117 - Compile fails when ctags missing
+
+    ctags is part of the 'all' target. As it's not required, a condition was 
+    added to continue if ctags is not installed.
+
+2017-02-27 21:54:03 +1100 Krayon <krayon.git@qdnx.org>
+    4a2426b Improve ctags file for vim omnicomplete
+
+2017-02-27 21:49:06 +1100 Krayon <krayon.git@qdnx.org>
+    649cb2c Non-release versions contain full branch name
+
+2016-12-05 22:04:23 +1100 Krayon <krayon.git@qdnx.org>
+    ccd3357 Pretty up Changelog format
+
+2016-12-05 21:56:52 +1100 Krayon <krayon.git@qdnx.org>
+    47409a9 Minor man page reformatting
+
+2016-12-05 19:17:33 +1100 Krayon <krayon.git@qdnx.org>
+    3b51f47 Add ratslap man page
+
+2016-11-19 01:54:55 +1100 Krayon <krayon.git@qdnx.org>
+    5521f66 Fix QB#111 - missing libusb_strerror function
+
+2016-11-19 01:36:40 +1100 Krayon <krayon.git@qdnx.org>
+    50e5190 Sign only when dist or explicitly requested
+
+2016-11-19 01:30:07 +1100 Krayon <krayon.git@qdnx.org>
+    b26a10d Add clarification that Logitech G300 == G300s
+
+2016-11-19 01:21:48 +1100 Krayon <krayon.git@qdnx.org>
+    05b1bbf Merge branch 'master' into develop
+
+    Conflicts:
+    README.creole
+
+2016-11-15 12:30:39 +1100 Krayon <krayon.git@qdnx.org>
+    fdf6203 Minor cleanup
+
+2016-11-15 12:29:11 +1100 Krayon <krayon.git@qdnx.org>
+    9613a1b Add note regarding libusbx permissions error
+
+2016-11-15 12:23:26 +1100 Krayon <krayon.git@qdnx.org>
+    68598b2 Minor rewrite of README to be clearer
+
+2016-11-09 23:59:28 +1100 Krayon <krayon.git@qdnx.org>
+    c5bd754 Minor correction
+
+2016-11-09 23:55:45 +1100 Krayon <krayon.git@qdnx.org>
+    7979614 Add signing of binary and archive
+
+2016-11-09 23:36:03 +1100 Krayon <krayon.git@qdnx.org>
+    7c3d939 Minor formatting change
+
+2016-11-09 23:13:50 +1100 Krayon <krayon.git@qdnx.org>
+    353fe44 Silly banner :P
+
+2016-11-09 23:13:50 +1100 Krayon <krayon.git@qdnx.org>
+    4443c45 Silly banner :P
+
+2016-11-09 22:53:52 +1100 Krayon <krayon.git@qdnx.org>
+    04b49c3 Add links to bugs in TODO and version history
+
+2016-11-09 22:53:52 +1100 Krayon <krayon.git@qdnx.org>
+    e7d47e8 Add links to bugs in TODO and version history
+
+2016-11-09 13:23:06 +1100 Krayon <krayon.git@qdnx.org>
+    150fb58 Add GPG signing of binary
+
+2016-11-09 13:20:05 +1100 Krayon <krayon.git@qdnx.org>
+    37f6ad7 Minor Makefile clean up
+
+2016-11-09 03:06:47 +1100 Krayon <krayon.git@qdnx.org>
+    c16b04f Merge branch 'release-0.2.0' into develop
+
+2016-11-09 03:01:37 +1100 Krayon <krayon.git@qdnx.org>
+    1e759b0 Merge branch 'release-0.2.0'
+
+2016-11-09 03:01:11 +1100 Krayon <krayon.git@qdnx.org>
+    52cdd70 RELEASE VERSION: 0.2.0
+
+2016-11-09 01:25:45 +1100 Krayon <krayon.git@qdnx.org>
+    1f11e1c Add another Usage example, with key bindings
+
+2016-11-09 01:14:02 +1100 Krayon <krayon.git@qdnx.org>
+    7b98287 Add example Usage and default G300 assignment list
+
+2016-11-09 00:15:22 +1100 Krayon <krayon.git@qdnx.org>
+    175c0b2 Add button/key assignment
+
+    * Add button assignment parameters:
+       -[1-9]
+       --[gG][4-9]
+       --left
+       --right
+       --middle
+
+    * Add support function set_mode_button().
+
+2016-11-08 23:17:46 +1100 Krayon <krayon.git@qdnx.org>
+    25bfa27 Add bug tracker link
+
+2016-11-08 16:03:11 +1100 Krayon <krayon.git@qdnx.org>
+    cfb9b10 BUG: Kernel driver stays discon'd on --listkeys
+
+2016-11-08 15:56:06 +1100 Krayon <krayon.git@qdnx.org>
+    c277433 BUG: Kernel driver stays discon'd on --help
+
+2016-11-08 14:36:40 +1100 Krayon <krayon.git@qdnx.org>
+    7d35464 Add colour modification
+
+    * Add '-c|--colour|--color <rate>' parameter and set_mode_colour().
+
+2016-11-08 14:15:17 +1100 Krayon <krayon.git@qdnx.org>
+    421d8ed Add rate modification
+
+    * Add '-r|--rate <rate>' parameter and set_mode_rate().
+
+2016-11-08 12:16:50 +1100 Krayon <krayon.git@qdnx.org>
+    c76c1d5 Add modify functionality
+
+    * Add '-m|--modify <mode>' parameter and mouse_editmode() to enable it.
+    * Add mode_save() function to save mode changes.
+
+2016-11-07 23:12:43 +1100 Krayon <krayon.git@qdnx.org>
+    3f5abe0 Minor changes
+
+2016-11-01 11:47:31 +1100 Krayon <krayon.git@qdnx.org>
+    4541950 Streamlined inits, other small mods
+
+    USB initialisation should only occur once at the start.
+
+    During 0.1.1 hotfix, accidentally checked in printing of current mode 
+    mapping so added it to the version history in the README.
+
+    Raw output of mode mapping was using printf instead of dlog.
+
+2016-11-01 00:55:49 +1100 Krayon <krayon.git@qdnx.org>
+    cd33caa Merge branch 'hotfix-0.1.1' into develop
+
+2016-11-01 00:53:42 +1100 Krayon <krayon.git@qdnx.org>
+    2093371 Merge branch 'hotfix-0.1.1'
+
+2016-11-01 00:49:58 +1100 Krayon <krayon.git@qdnx.org>
+    4797164 Fix gcc 5 compile error due to inline semantics
+
+    GCC 5 uses C99 inline semantics. The std_output function will probably 
+    be optimised anyway and since I'm not sure how I feel about C99 inline 
+    stuff yet, I'll just remove the inline-y-ness.
+
+2016-11-01 00:48:53 +1100 Krayon <krayon.git@qdnx.org>
+    2bf9e87 RELEASE VERSION: 0.1.1
+
+2016-10-29 02:29:54 +1100 Krayon <krayon.git@qdnx.org>
+    3e4bd6b Merge branch 'release-0.1.0' into develop
+
+2016-10-28 16:40:14 +1100 Krayon <krayon.git@qdnx.org>
+    89b0d34 Merge branch 'release-0.1.0'
+
+2016-10-28 16:39:40 +1100 Krayon <krayon.git@qdnx.org>
+    45d1eb1 RELEASE VERSION: 0.1.0
+
+2016-10-28 16:11:47 +1100 Krayon <krayon.git@qdnx.org>
+    6184593 Correct base version to v0.0.0
+
+2016-10-28 16:10:28 +1100 Krayon <krayon.git@qdnx.org>
+    0587f8f Add exit codes for errors
+
+2016-10-28 11:57:39 +1100 Krayon <krayon.git@qdnx.org>
+    4b40953 Yet ANOTHER minor formatting error :/
+
+2016-10-28 11:53:45 +1100 Krayon <krayon.git@qdnx.org>
+    6307427 Correct minor formatting error
+
+2016-10-28 11:16:55 +1100 Krayon <krayon.git@qdnx.org>
+    46551d8 Add --listkeys option and notes on our features
+
+    From sniffing the USB traffic, trial-and-error, and extrapolation, I 
+    dave determined all the possible mouse buttons, keys and modifiers that 
+    one can specify.
+
+    We are able to do a lot more than Logitech's software now :D
+
+    Added README.creole Notes section titled "Logitech Software's Artificial 
+    Restrictions" to document this.
+
+2016-10-28 09:58:12 +1100 Krayon <krayon.git@qdnx.org>
+    59d996a Add mode select, remove broken interface retrieve
+
+    Add ability to select a mouse mode (button configuration profile) using
+    '-s'. The Logitech G300s supports 3 modes, F3, F4 and F5.
+
+    Removing broken mouse_get_hid_interface_index() as it seems it's not the 
+    way to determine interface index. Is there a way, if so I don't know it 
+    yet so it's now hardcoded :(
+
+2016-10-23 23:20:51 +1100 Krayon <krayon.git@qdnx.org>
+    a807a55 Add HID detach/attach, USB HID class lookup
+
+2016-10-23 18:11:20 +1100 Krayon <krayon.git@qdnx.org>
+    41e6104 Minor changes
+
+2016-10-23 17:38:30 +1100 Krayon <krayon.git@qdnx.org>
+    9ee1d5f Add command line options
+
+2016-10-23 17:35:24 +1100 Krayon <krayon.git@qdnx.org>
+    5fd6759 Add placeholder for language translations
+
+2016-10-23 17:34:15 +1100 Krayon <krayon.git@qdnx.org>
+    d236758 Superficial changes
+
+2016-10-17 15:47:39 +1100 Krayon <krayon.git@qdnx.org>
+    9c74954 Add USB discovery of Logitech G300s device
+
+2016-10-17 15:26:41 +1100 Krayon <krayon.git@qdnx.org>
+    8340176 Rename LOG_COMMS to LOG_USB
+
+2016-10-14 20:19:04 +1100 Krayon <krayon.git@qdnx.org>
+    f4b703c Add G300s sniffing results
+
+2016-10-14 18:39:34 +1100 Krayon <krayon.git@qdnx.org>
+    5d1bc1d Start of sniffing notes
+
+2016-10-14 17:22:37 +1100 Krayon <krayon.git@qdnx.org>
+    1254be0 Add app summary and URL
+
+2016-10-14 17:16:30 +1100 Krayon <krayon.git@qdnx.org>
+    7bf6e1f Add configurable build options
+
+2016-10-14 17:14:57 +1100 Krayon <krayon.git@qdnx.org>
+    43dd76f Add logging functionality
+
+2016-10-14 16:48:00 +1100 Krayon <krayon.git@qdnx.org>
+    3533693 Add auto git version labelling
+
+2016-10-14 16:45:04 +1100 Krayon <krayon.git@qdnx.org>
+    469a959 Corrected copyright
+
+2016-10-14 16:43:38 +1100 Krayon <krayon.git@qdnx.org>
+    810af1a Removed reference to missing OPTIONS file
+
+2016-10-14 16:33:53 +1100 Krayon <krayon.git@qdnx.org>
+    acd7863 Basic build and code skeleton
+
+2016-10-14 16:22:18 +1100 Krayon <krayon.git@qdnx.org>
+    5e5846d Add note about button limitation of Logitech software
+
+2016-10-13 22:18:18 +1100 Krayon <krayon.git@qdnx.org>
+    7ca730e Add notes on USB sniff technique
+
+2016-10-13 21:44:39 +1100 Krayon <krayon.git@qdnx.org>
+    aca92e2 Add README and LICENSE
+
+2016-10-13 21:03:18 +1100 Krayon <krayon.git@qdnx.org>
+    34be12a Initial repository creation
+

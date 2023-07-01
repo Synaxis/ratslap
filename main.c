@@ -791,49 +791,49 @@ int mouse_hid_attach_kernel(int iface) {
     return 0;
 }
 
+#include <libusb.h>
+
+// Assume appropriate includes, declarations and initializations
+
+// Assume definition of t_mode and other constants here
+
+static uint16_t mode_to_mi(t_mode mode) {
+    switch(mode) {
+        case mode_f3: return 0xf3;
+        case mode_f4: return 0xf4;
+        case mode_f5: return 0xf5;
+        default: return 0;
+    }
+}
+
+static void create_bitout(unsigned char *mode_data, const uint16_t exp_len, char *bitout) {
+    char *po = bitout;
+    for (int bit = 0; bit < exp_len; ++bit) {
+        sprintf(po, "%.2x", mode_data[bit]);
+        po += strlen(po);
+        if ((bit+1) % 4 == 0) sprintf(po++, " ");
+    }
+}
+
 static t_mode change_mode(libusb_device_handle *usb_dev_handle, t_mode mode) {
-    unsigned char payload[] = "\xf0\xff\x00\x00";
-
-    int ret;
-
     if (!_mouse_primed || !usb_dev_handle || mode >= mode_COUNT) return mode_COUNT;
 
-    if (mode == mode_f3) {
-        // Top Mode
-        // S Co:2:039:0 s 21 09 03f0 0001 0004 4 = f0800000
-        // NOTE: b0, c0, f0 also seem to work
-        payload[1] = '\x80';
+    unsigned char payload[] = "\xf0\xff\x00\x00";
+    unsigned char modes[] = {'\x80', '\x90', '\xa0'};  // respective values for mode_f3, mode_f4, mode_f5
 
-    } else
-    if (mode == mode_f4) {
-        // (Bottom) Right Mode
-        // S Co:2:039:0 s 21 09 03f0 0001 0004 4 = f0900000
-        // NOTE: d0 also seems to work
-        payload[1] = '\x90';
+    if (mode < mode_f3 || mode > mode_f5) return mode_COUNT;
+    payload[1] = modes[mode - mode_f3];
 
-    } else
-    if (mode == mode_f5) {
-        // (Bottom) Left Mode
-        // S Co:2:039:0 s 21 09 03f0 0001 0004 4 = f0a00000
-        // NOTE: e0 also seems to work
-        payload[1] = '\xa0';
+    int ret = libusb_control_transfer(
+         usb_dev_handle,
+         LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE|LIBUSB_ENDPOINT_OUT,
+         HID_REQ_SET_REPORT,
+         0x03f0,
+         0x0001,
+         payload,
+         sizeof(payload) - 1,
+         1000);
 
-    } else {
-        return mode_COUNT;
-
-    }
-
-    ret = libusb_control_transfer(
-         usb_dev_handle
-        ,LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE|LIBUSB_ENDPOINT_OUT
-        ,HID_REQ_SET_REPORT
-        ,0x03f0
-        ,0x0001
-        ,payload
-        ,sizeof(payload) - 1
-        ,1000);
-
-    // This process takes time
     usleep(10000);
 
     dlog(LOG_USB, "  --> %d\n", ret);
@@ -841,29 +841,24 @@ static t_mode change_mode(libusb_device_handle *usb_dev_handle, t_mode mode) {
     return mode;
 }
 
-// Expected length: 35
 static int mode_load(unsigned char *mode_data, libusb_device_handle *usb_dev_handle, t_mode mode) {
     const uint16_t exp_len = 35;
-    uint16_t mi;
-    int ret;
 
     if (!_mouse_primed || !mode_data || !usb_dev_handle || mode >= mode_COUNT) return 0;
 
-    if      (mode == mode_f3) mi = 0xf3;
-    else if (mode == mode_f4) mi = 0xf4;
-    else if (mode == mode_f5) mi = 0xf5;
-    else return 0;
+    uint16_t mi = mode_to_mi(mode);
+    if (!mi) return 0;
 
-    ret = libusb_control_transfer(
-         usb_dev_handle
-        ,LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE|LIBUSB_ENDPOINT_IN
-        ,HID_REQ_GET_REPORT
-        ,0x0300|mi
-        ,0x0001
-        ,mode_data
-        ,exp_len
-        ,1000
-    );
+    int ret = libusb_control_transfer(
+         usb_dev_handle,
+         LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE|LIBUSB_ENDPOINT_IN,
+         HID_REQ_GET_REPORT,
+         0x0300|mi,
+         0x0001,
+         mode_data,
+         exp_len,
+         1000);
+
     usleep(10000);
 
     if (ret != exp_len) {
@@ -871,15 +866,8 @@ static int mode_load(unsigned char *mode_data, libusb_device_handle *usb_dev_han
         return 0;
     }
 
-    int bit;
-    char bitout[255]
-         ,*po = &bitout[0];
-    for (bit = 0; bit < exp_len; ++bit) {
-        sprintf(po, "%.2x", (mode_data)[bit]);
-        po += strlen(po);
-        if ((bit+1) % 4 == 0) sprintf(po, " ");
-        po += strlen(po);
-    }
+    char bitout[255];
+    create_bitout(mode_data, exp_len, bitout);
     dlog(LOG_PARSE, "Mode 0x%.2x: %s\n", mi, bitout);
 
     return exp_len;
@@ -887,31 +875,22 @@ static int mode_load(unsigned char *mode_data, libusb_device_handle *usb_dev_han
 
 static int mode_save(unsigned char *mode_data, libusb_device_handle *usb_dev_handle, const t_mode mode) {
     const uint16_t exp_len = 35;
-    uint16_t mi;
-    int ret;
-    int bit;
-    char bitout[255]
-         ,*po = &bitout[0];
-
-    unsigned char cmp[255];
 
     if (!_mouse_primed || !mode_data || !usb_dev_handle || mode >= mode_COUNT) return 0;
 
-    if      (mode == mode_f3) mi = 0xf3;
-    else if (mode == mode_f4) mi = 0xf4;
-    else if (mode == mode_f5) mi = 0xf5;
-    else return 0;
+    uint16_t mi = mode_to_mi(mode);
+    if (!mi) return 0;
 
-    ret = libusb_control_transfer(
-         usb_dev_handle
-        ,LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE|LIBUSB_ENDPOINT_OUT
-        ,HID_REQ_SET_REPORT
-        ,0x0300|mi
-        ,0x0001
-        ,mode_data
-        ,exp_len
-        ,1000
-    );
+    int ret = libusb_control_transfer(
+         usb_dev_handle,
+         LIBUSB_REQUEST_TYPE_CLASS|LIBUSB_RECIPIENT_INTERFACE|LIBUSB_ENDPOINT_OUT,
+         HID_REQ_SET_REPORT,
+         0x0300|mi,
+         0x0001,
+         mode_data,
+         exp_len,
+         1000);
+    
     usleep(500000); // Writes are SLOW
 
     if (ret != exp_len) {
@@ -919,30 +898,20 @@ static int mode_save(unsigned char *mode_data, libusb_device_handle *usb_dev_han
         return 0;
     }
 
-    po = &bitout[0];
-    for (bit = 0; bit < exp_len; ++bit) {
-        sprintf(po, "%.2x", (mode_data)[bit]);
-        po += strlen(po);
-        if ((bit+1) % 4 == 0) sprintf(po, " ");
-        po += strlen(po);
-    }
+    char bitout[255];
+    create_bitout(mode_data, exp_len, bitout);
     dlog(LOG_PARSE, "Mode 0x%.2x: %s\n", mi, bitout);
 
     dlog(LOG_PARSE, "Comparing to stored:\n");
 
-    ret = mode_load(&cmp[0], usb_dev_handle, mode);
+    unsigned char cmp[255];
+    ret = mode_load(cmp, usb_dev_handle, mode);
     if (ret != exp_len) {
         elog("ERROR: Failed to retrieve mapping for mode 0x%.2x\n", mi);
         return 0;
     }
 
-    po = &bitout[0];
-    for (bit = 0; bit < exp_len; ++bit) {
-        sprintf(po, "%.2x", (cmp)[bit]);
-        po += strlen(po);
-        if ((bit+1) % 4 == 0) sprintf(po, " ");
-        po += strlen(po);
-    }
+    create_bitout(cmp, exp_len, bitout);
     dlog(LOG_PARSE, "Mode 0x%.2x: %s\n", mi, bitout);
 
     if (memcmp(mode_data, cmp, exp_len) != 0) {
@@ -952,6 +921,7 @@ static int mode_save(unsigned char *mode_data, libusb_device_handle *usb_dev_han
 
     return exp_len;
 }
+
 
 static int mode_print(unsigned char *mode_data, int len) {
     unsigned char bit = 0;
@@ -1072,19 +1042,21 @@ static int set_mode_rate(unsigned char *mode_data, const int rate) {
     return 0;
 }
 
-static int set_mode_dpi(unsigned char *mode_data, const int idx, const int dpi) {
-    int dpi_val = dpi >= 4000 ? 0 : (dpi/250)&0xf;
-    int real_dpi = !dpi_val ? 4000 : dpi_val*250;
+#include <math.h>
 
-    if (!mode_data || idx < 0 || idx > 3 || dpi < 250) return 0;
+static int set_mode_dpi(unsigned char *mode_data, const int idx, const int dpi) {
+    int dpi_val = dpi > 4000 ? 0 : dpi / 50;
+    int real_dpi = !dpi_val ? 4000 : dpi_val * 50;
+
+    // Validation
+    if (!mode_data || idx < 0 || idx > 3 || dpi < 250 || dpi > 4000 || dpi % 50 != 0) return 0;
 
     printf("    Setting DPI #%d: %d\n", idx + 1, real_dpi);
 
-    // F5040302 84060844 01000002 00000300 00040000 05000006 00000700 00080000 090000
-    //       ^^ ^^^^^^
-    (mode_data)[3+idx] = ((mode_data)[3+idx] & 0x80) | dpi_val;
+    (mode_data)[3+idx] = ((mode_data)[3+idx] & 0x80) | (dpi_val & 0x7f);
     return real_dpi;
 }
+
 
 static int set_mode_defdpi(unsigned char *mode_data, const int idx) {
     int i;
