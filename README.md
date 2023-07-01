@@ -3,9 +3,6 @@
 ``````<br><br>
 
 //sets dpi to 800<br><br>
-```sudo ./ratslap --modify F3 -D 800```
+```sudo ./dpi_setter --modify F3 -D 800 -r 1000```
 
 if compile fails ```pkg-config --cflags --libs libusb-1.0```<br><br>
-
-Owner and creators https://github.com/krayon/ratslap
-CREATOR krayon/ratslap
