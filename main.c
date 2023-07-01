@@ -1353,6 +1353,7 @@ int mouse_unprime(void) {
     return exit_none;
 }
 
+
 int main (int argc, char *argv[]) {
     t_exit ret = exit_none;
     int c;
@@ -1779,3 +1780,5 @@ int main (int argc, char *argv[]) {
 
     return ret;
 }
+
+
